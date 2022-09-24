@@ -28,7 +28,7 @@
 <div class="custom-filters">Recommended Searches 
 
 <ul>
-  {% assign beatles = section.settings.filters | split: ", " %}
+  {% assign beatles = section.settings.filters | split: "," %}
 
 {% for member in beatles %}
  <li> {{ member }}</li>
