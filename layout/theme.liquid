@@ -295,9 +295,9 @@
     <script>
       $( document ).ready(function() {
     $("input[name='recommened']").click(function() {
-      alert('hg');
-      alert($(this).val());
-    
+      var filter = $(this).val();
+      var url = window.location.href.split('?')[0];
+      alert(url);
            
     });
 });
