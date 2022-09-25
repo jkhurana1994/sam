@@ -33,11 +33,11 @@
     <div class="accordion_head">Features<span class="plusminus">+</span></div>
     <div class="accordion_body" style="display: none;">
          <ul class="collections_filter">
-    {% assign beatles = section.settings.filters | split: "," %}
-    {% for member in beatles %}
-      <li> <input type="radio" name="recommened" value="{{ member }}" class="custom_filters"> {{ member }}</li>
-    {% endfor %}
-  </ul>
+          {% assign beatles = section.settings.filters | split: "," %}
+          {% for member in beatles %}
+            <li> <input type="radio" name="recommened" value="{{ member }}" class="custom_filters"> {{ member }}</li>
+          {% endfor %}
+        </ul>
     </div>   
 </div>
   
