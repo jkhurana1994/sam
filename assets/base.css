@@ -2960,3 +2960,4 @@ details-disclosure > details {
 
 /*  */
 .collections_filter li {list-style: none;}
+.collections_filter {padding: 0;}
