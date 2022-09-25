@@ -25,16 +25,14 @@
     }
   }
 {%- endstyle -%}
-<div class="custom-filters">Recommended Searches 
-
-<ul class="collections_filter">
-  {% assign beatles = section.settings.filters | split: "," %}
-
-{% for member in beatles %}
- <li> <input type="radio" name="recommened" value="{{ member }}" class="custom_filters"> {{ member }}</li>
-{% endfor %}
-
-</ul>
+<div class="custom-filters">
+  <p>Recommended Searches </p>
+  <ul class="collections_filter">
+    {% assign beatles = section.settings.filters | split: "," %}
+    {% for member in beatles %}
+      <li> <input type="radio" name="recommened" value="{{ member }}" class="custom_filters"> {{ member }}</li>
+    {% endfor %}
+  </ul>
 </div>
 
 <div class="section-{{ section.id }}-padding">
