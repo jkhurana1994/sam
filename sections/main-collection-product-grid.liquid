@@ -25,6 +25,9 @@
     }
   }
 {%- endstyle -%}
+
+
+<div class="section-{{ section.id }}-padding">
 <div class="accordion_container custom-filters">
     <div class="accordion_head">Recommended Searches<span class="plusminus">+</span></div>
     <div class="accordion_body" style="display: none;">
@@ -36,8 +39,7 @@
   </ul>
     </div>   
 </div>
-
-<div class="section-{{ section.id }}-padding">
+  
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
   {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
     <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
