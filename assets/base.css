@@ -2957,3 +2957,6 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
+
+/*  */
+.collections_filter li {list-style: none;}
