@@ -2960,11 +2960,31 @@ details-disclosure > details {
 
 /* collections_filter */
 
-.collections_filter {padding: 0;}
-.collections_filter li {list-style: none;}
-.custom-filters h4 {margin-top: 0;font-weight: 600;}
-.accordion_head {
-    border-bottom: 1px solid #ddd;
+.collections_filter {padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;}
+.collections_filter li {
+    list-style: none;
     position: relative;
-    padding-bottom: 5px;
+    border: 1px solid #ddd;
+    padding: 10px 24px;
+    border-radius: 50px;
+    line-height: 1;
+    font-size: 16px;
 }
+.custom-filters h4 {margin-top: 0;font-weight: 600;}
+
+
+
+
+
+
+
+
+
+
+
+
+
