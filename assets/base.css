@@ -2959,5 +2959,7 @@ details-disclosure > details {
 }
 
 /*  */
-.collections_filter li {list-style: none;}
+
 .collections_filter {padding: 0;}
+.collections_filter li {list-style: none;}
+.accordion_container.custom-filters {max-width: 320px;}
