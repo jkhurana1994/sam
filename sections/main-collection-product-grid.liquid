@@ -25,15 +25,8 @@
     }
   }
 {%- endstyle -%}
-<div class="custom-filters">
-  <p> </p>
-
-</div>
-
 <div class="accordion_container custom-filters">
-    <div class="accordion_head">Recommended Searches<span class="plusminus">+</span>
-
-    </div>
+    <div class="accordion_head">Recommended Searches<span class="plusminus">+</span></div>
     <div class="accordion_body" style="display: none;">
          <ul class="collections_filter">
     {% assign beatles = section.settings.filters | split: "," %}
@@ -150,7 +143,24 @@
   </div>
 </div>
 
-
+<script>
+  $(document).ready(function () {
+    //toggle the component with class accordion_body
+    $(".accordion_head").click(function () {
+        if ($('.accordion_body').is(':visible')) {
+            $(".accordion_body").slideUp(300);
+            $(".plusminus").text('+');
+        }
+        if ($(this).next(".accordion_body").is(':visible')) {
+            $(this).next(".accordion_body").slideUp(300);
+            $(this).children(".plusminus").text('+');
+        } else {
+            $(this).next(".accordion_body").slideDown(300);
+            $(this).children(".plusminus").text('-');
+        }
+    });
+});
+</script>
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",
