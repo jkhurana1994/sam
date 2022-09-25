@@ -298,7 +298,8 @@
 const searchParams = url.searchParams;
 
 const filet = searchParams.get('filter.p.m.custom.features'); 
-alert(filet);
+        $('#'+filet).addClass('active');
+        
         
     $("input[name='recommened']").click(function() {
       var filter = $(this).val();
