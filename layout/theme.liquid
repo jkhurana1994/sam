@@ -294,6 +294,12 @@
 
     <script>
       $( document ).ready(function() {
+        const url = new URL(window.location.href);
+const searchParams = url.searchParams;
+
+const filet = searchParams.get('filter.p.m.custom.features'); 
+alert(filet);
+        
     $("input[name='recommened']").click(function() {
       var filter = $(this).val();
       var url = window.location.href.split('?')[0];
