@@ -31,7 +31,7 @@
   {% assign beatles = section.settings.filters | split: "," %}
 
 {% for member in beatles %}
- <li> <input type="checkbox" name="recommened" value="{{ member }}" class="custom_filters"> {{ member }}</li>
+ <li> <input type="radio" name="recommened" value="{{ member }}" class="custom_filters"> {{ member }}</li>
 {% endfor %}
 
 </ul>
