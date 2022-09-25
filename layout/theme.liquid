@@ -296,11 +296,8 @@
       $( document ).ready(function() {
         const url = new URL(window.location.href);
 const searchParams = url.searchParams;
-
 const filet = searchParams.get('filter.p.m.custom.features'); 
-        $('#'+filet).addClass('active');
-        
-        
+        $('#'+filet).addClass('active');    
     $("input[name='recommened']").click(function() {
       var filter = $(this).val();
       var url = window.location.href.split('?')[0];
@@ -308,8 +305,6 @@ const filet = searchParams.get('filter.p.m.custom.features');
     });
 });
     </script>
-
-
  <script>
 var selector = '.collections_filter li';
 jQuery(selector).on('click', function(){
