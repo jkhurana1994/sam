@@ -2995,7 +2995,11 @@ details-disclosure > details {
     z-index: -1;
 }
 .collections_filter li input.custom_filters:checked+span{color:#fff;}
-
+.custom-filters {
+    border-bottom: 1px solid#ddd;
+    margin-bottom: 32px;
+    overflow: auto;
+}
 
 
 
