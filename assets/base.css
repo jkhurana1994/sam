@@ -2962,6 +2962,5 @@ details-disclosure > details {
 
 .collections_filter {padding: 0;}
 .collections_filter li {list-style: none;}
-.accordion_container.custom-filters {    max-width: 320px;
-    background: #f8f8f8;
-    padding: 24px;}
+.accordion_container.custom-filters {max-width: 320px;background: #f8f8f8;padding: 24px;}
+.custom-filters h4 {margin-top: 0;font-weight: 600;}
