@@ -2983,17 +2983,18 @@ details-disclosure > details {
     bottom: 0;
     opacity: 0;
 }
-.collections_filter li input.custom_filters:checked + span:before{
-  content:"";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 50px;
-  background: rgba(0,0,0,0.2);
+.collections_filter li input.custom_filters:checked+span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -1px;
+    bottom: -1px;
+    border-radius: 50px;
+    background: #5c6ac4;
+    z-index: -1;
 }
-
+.collections_filter li input.custom_filters:checked+span{color:#fff;}
 
 
 
