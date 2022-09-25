@@ -303,23 +303,13 @@
     </script>
 
 
-<!--     <script>
-  jQuery(document).ready(function () {
-    //toggle the component with class accordion_body
-    jQuery(".accordion_head").click(function () {
-        if ($('.accordion_body').is(':visible')) {
-            $(".accordion_body").slideUp(300);
-            $(".plusminus").text('+');
-        }
-        if ($(this).next(".accordion_body").is(':visible')) {
-            $(this).next(".accordion_body").slideUp(300);
-            $(this).children(".plusminus").text('+');
-        } else {
-            $(this).next(".accordion_body").slideDown(300);
-            $(this).children(".plusminus").text('-');
-        }
-    });
+ <script>
+var selector = '.nav li';
+
+jQuery(selector).on('click', function(){
+    jQuery(selector).removeClass('active');
+    jQuery(this).addClass('active');
 });
-</script> -->
+</script>
   </body>
 </html>
