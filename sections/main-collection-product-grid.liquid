@@ -28,6 +28,7 @@
 
 
 <div class="section-{{ section.id }}-padding">
+  <div class="page-width">
 <div class="custom-filters">
     <h4>Recommended Searches</h4>
      <ul class="collections_filter">
@@ -37,6 +38,7 @@
       {% endfor %}
     </ul>  
 </div>
+  </div>
   
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
   {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
