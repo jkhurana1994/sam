@@ -295,7 +295,9 @@
 <script>
 $( document ).ready(function() {
 function doSomething(successdata){
-   document.getElementById("shopify-section-template--16015676113045__banner").empty().appendChild(successdata);
+    $('#shopify-section-template--16015676113045__product-grid').remove();
+    $('#shopify-section-template--16015676113045__banner').after(successdata); 
+    console.log(successdata);
 }
 
   const url = new URL(window.location.href);
@@ -307,12 +309,11 @@ function doSomething(successdata){
     var filterreplaced = str.split(' ').join('+');
     var url = window.location.href.split('?')[0];
     var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
-    // window.location.href = url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
-    fetch(urladded)
+    console.log(urladded);
+    var jatin = fetch('https://sam-workshop.myshopify.com/collections/all?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features=Tops')
       .then(response => response.text())
-      .then(data => data)
-      .then(success => doSomething(success));
-      });
+      .then(data => (data)).then(success => doSomething(success));
+  });
 });
 </script>
 <script>
