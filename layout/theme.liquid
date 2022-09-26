@@ -304,9 +304,9 @@ $( document ).ready(function() {
     var url = window.location.href.split('?')[0];
     var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
     // window.location.href = url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
-fetch('https://sam-workshop.myshopify.com/collections/all?filter.p.m.custom.features=Tops')
+fetch(urladded)
   .then(response => response.text())
-  .then(data => console.log(data));
+  .then(data => document.getElementById("shopify-section-template--16015676113045__banner").empty().appendChild(data));
   });
 });
 </script>
