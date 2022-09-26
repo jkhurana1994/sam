@@ -296,6 +296,8 @@
 $( document ).ready(function() {
 function doSomething(successdata){
   $('#shopify-section-template--16015676113045__product-grid').remove();
+  successdata.replace('show-more.js','');
+  successdata.replace('facets.js','');
   $('#shopify-section-template--16015676113045__banner').after(successdata); 
 }
 
