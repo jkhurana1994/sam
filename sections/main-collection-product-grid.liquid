@@ -145,12 +145,11 @@ function doSomething(successdata){
   $('#shopify-section-template--16015676113045__product-grid').remove();
   $('#shopify-section-template--16015676113045__banner').after(successdata); 
 }
+
 const url = new URL(window.location.href);
   const searchParams = url.searchParams;
   const filet = searchParams.get('filter.p.m.custom.features'); 
-   var filterreplaced1 = filet.split('+').join(' ');
-   alert(filterreplaced1);
-  
+   var filterreplaced1 = filet.split('+').join('-');
   $('#'+filterreplaced1).addClass('active');  
   
 var selector = '.collections_filter li';
