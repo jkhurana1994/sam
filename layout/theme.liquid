@@ -295,9 +295,11 @@
 <script>
 $( document ).ready(function() {
 function doSomething(successdata){
+console.log("==== before ======"+successdata);
   $('#shopify-section-template--16015676113045__product-grid').remove();
   successdata.replace('show-more.js','');
   successdata.replace('facets.js','');
+  console.log("==== after ======"+successdata);
   $('#shopify-section-template--16015676113045__banner').after(successdata); 
 }
 
