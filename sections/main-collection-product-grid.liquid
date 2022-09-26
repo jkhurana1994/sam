@@ -154,7 +154,7 @@ var selector = '.collections_filter li';
 $(selector).on('click', function(){
     $('.custom_filters.active').removeClass('active'); // Just remove class from all folder
     $(this).addClass('active');
-    var filter = $(this).('.custom_filters').val();
+    var filter = $(this).find('input:radio').val();
   alert(filter);
     var filterreplaced = filter.split(' ').join('+');
     var url = window.location.href.split('?')[0];
