@@ -299,10 +299,9 @@ function doSomething(successdata){
   $('#shopify-section-template--16015676113045__banner').after(successdata); 
 }
   const url = new URL(window.location.href);
-  const searchParams = url.searchParams;
-  const filet = searchParams.get('filter.p.m.custom.features'); 
-  $('#'+filet).addClass('active');    
   $("input[name='recommened']").click(function() {
+    $('.custom_filters.active').removeClass('active'); // Just remove class from all folder
+    $(this).addClass('active'); 
     var filter = $(this).val();
     var filterreplaced = filter.split(' ').join('+');
     var url = window.location.href.split('?')[0];
