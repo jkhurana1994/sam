@@ -148,10 +148,8 @@ function doSomething(successdata){
 
 const url = new URL(window.location.href);
   const searchParams = url.searchParams;
-  const filet = searchParams.get('filter.p.m.custom.features'); 
-  
+  const filet = searchParams.get('filter.p.m.custom.features');   
    var filterreplaced1 = filet.split(' ').join('_');
-  alert(filterreplaced1);
   $('#'+filterreplaced1).addClass('active');  
   
 var selector = '.collections_filter li';
