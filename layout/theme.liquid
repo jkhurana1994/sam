@@ -309,7 +309,7 @@ function doSomething(successdata){
     var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
     console.log(urladded);
     history.pushState('data','',urladded);
-    var jatin = fetch(urladded)
+    fetch(urladded)
       .then(response => response.text())
       .then(data => (data)).then(success => doSomething(success));
   });
