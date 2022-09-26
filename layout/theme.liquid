@@ -309,8 +309,9 @@ function doSomething(successdata){
     var filterreplaced = filter.split(' ').join('+');
     var url = window.location.href.split('?')[0];
     var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
+    var urltohearer=url+'?sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
     console.log(urladded);
-    history.pushState('data','',urladded);
+    history.pushState('data','',urltohearer);
     var jatin = fetch(urladded)
       .then(response => response.text())
       .then(data => (data)).then(success => doSomething(success));
