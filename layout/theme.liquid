@@ -297,7 +297,6 @@ $( document ).ready(function() {
 function doSomething(successdata){
     $('#shopify-section-template--16015676113045__product-grid').remove();
     $('#shopify-section-template--16015676113045__banner').after(successdata); 
-    console.log(successdata);
 }
 
   const url = new URL(window.location.href);
@@ -310,7 +309,8 @@ function doSomething(successdata){
     var url = window.location.href.split('?')[0];
     var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
     console.log(urladded);
-    var jatin = fetch('https://sam-workshop.myshopify.com/collections/all?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features=Tops')
+    history.pushState('data','','https://sam-workshop.myshopify.com/collections/all?p');
+    var jatin = fetch(urladded)
       .then(response => response.text())
       .then(data => (data)).then(success => doSomething(success));
   });
