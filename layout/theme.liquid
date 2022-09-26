@@ -300,8 +300,13 @@ $( document ).ready(function() {
   $('#'+filet).addClass('active');    
   $("input[name='recommened']").click(function() {
     var filter = $(this).val();
+    var filterreplaced = str.split(' ').join('+');
     var url = window.location.href.split('?')[0];
-    window.location.href = url+'?filter.p.m.custom.features='+filter;
+    var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
+    // window.location.href = url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
+fetch('https://sam-workshop.myshopify.com/collections/all?filter.p.m.custom.features=Tops')
+  .then(response => response.text())
+  .then(data => console.log(data));
   });
 });
 </script>
