@@ -2,9 +2,7 @@
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-
 <link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
 {%- if section.settings.enable_quick_add -%}
   <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
@@ -25,12 +23,9 @@
     }
   }
 {%- endstyle -%}
-
-
 <div class="section-{{ section.id }}-padding">
-
-  <div class="page-width">
-<div class="custom-filters">
+<div class="page-width">
+  <div class="custom-filters">
     <h4>Recommended Searches</h4>
      <ul class="collections_filter">
       {% assign beatles = section.settings.filters | split: "," %}
@@ -38,9 +33,8 @@
         <li> <input type="radio" name="recommened" value="{{ member }}" id="{{ member }}" class="custom_filters"> <span>{{ member }}</span></li>
       {% endfor %}
     </ul>  
-</div>
   </div>
-  
+</div>
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
   {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
     <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
@@ -87,7 +81,7 @@
     </facet-filters-form>
   {%- endif -%}
 
-  <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
+  <div id="" class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
     {{ 'component-facets.css' | asset_url | stylesheet_tag }}
     
     {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
