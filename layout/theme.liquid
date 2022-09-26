@@ -295,12 +295,6 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-<script>
-var selector = '.collections_filter li';
-jQuery(selector).on('click', function(){
-  jQuery(selector).removeClass('active');
-  jQuery(this).addClass('active');
-});
-</script>
+
 </body>
 </html>
