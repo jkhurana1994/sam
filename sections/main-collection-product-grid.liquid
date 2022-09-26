@@ -30,7 +30,7 @@
      <ul class="collections_filter">
       {% assign beatles = section.settings.filters | split: "," %}
       {% for member in beatles %}
-        <li> <input type="radio" name="recommened" value="{{ member }}" id="{{ member | handleize }}" class="custom_filters"> <span>{{ member }}</span></li>
+        <li> <input type="radio" name="recommened" value="{{ member }}" id="{{ member | handleize | capitalize }}" class="custom_filters"> <span>{{ member }}</span></li>
       {% endfor %}
     </ul>  
   </div>
