@@ -306,7 +306,7 @@ function doSomething(successdata){
   $('#'+filet).addClass('active');    
   $("input[name='recommened']").click(function() {
     var filter = $(this).val();
-    var filterreplaced = str.split(' ').join('+');
+    var filterreplaced = filter.split(' ').join('+');
     var url = window.location.href.split('?')[0];
     var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
     console.log(urladded);
