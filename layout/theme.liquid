@@ -295,16 +295,9 @@
 <script>
 $( document ).ready(function() {
 function doSomething(successdata){
-console.log("==== before ======"+successdata);
   $('#shopify-section-template--16015676113045__product-grid').remove();
-  var a='<script src="//cdn.shopify.com/s/files/1/0499/0844/9429/t/10/assets/show-more.js?v=90883108635033788741663914134" defer="defer">';
-  var b ='<script src="//cdn.shopify.com/s/files/1/0499/0844/9429/t/10/assets/facets.js?v=5979223589038938931663914135" defer="defer">';
-  successdata.replace(a,'');
-  successdata.replace(b,'');
-  console.log("==== after ======"+successdata);
   $('#shopify-section-template--16015676113045__banner').after(successdata); 
 }
-
   const url = new URL(window.location.href);
   const searchParams = url.searchParams;
   const filet = searchParams.get('filter.p.m.custom.features'); 
