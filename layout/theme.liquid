@@ -292,25 +292,25 @@
     {%- endif -%}
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-    <script>
-      $( document ).ready(function() {
-        const url = new URL(window.location.href);
-const searchParams = url.searchParams;
-const filet = searchParams.get('filter.p.m.custom.features'); 
-        $('#'+filet).addClass('active');    
-    $("input[name='recommened']").click(function() {
-      var filter = $(this).val();
-      var url = window.location.href.split('?')[0];
-      window.location.href = url+'?filter.p.m.custom.features='+filter;
-    });
-});
-    </script>
- <script>
-var selector = '.collections_filter li';
-jQuery(selector).on('click', function(){
-    jQuery(selector).removeClass('active');
-    jQuery(this).addClass('active');
+<script>
+$( document ).ready(function() {
+  const url = new URL(window.location.href);
+  const searchParams = url.searchParams;
+  const filet = searchParams.get('filter.p.m.custom.features'); 
+  $('#'+filet).addClass('active');    
+  $("input[name='recommened']").click(function() {
+    var filter = $(this).val();
+    var url = window.location.href.split('?')[0];
+    window.location.href = url+'?filter.p.m.custom.features='+filter;
+  });
 });
 </script>
-  </body>
+<script>
+var selector = '.collections_filter li';
+jQuery(selector).on('click', function(){
+  jQuery(selector).removeClass('active');
+  jQuery(this).addClass('active');
+});
+</script>
+</body>
 </html>
