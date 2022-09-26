@@ -149,9 +149,11 @@ function doSomething(successdata){
 const url = new URL(window.location.href);
   const searchParams = url.searchParams;
   const filet = searchParams.get('filter.p.m.custom.features');
+  if(filet != null){
   alert(filet);
    var filterreplaced1 = filet.split(' ').join('_');
   $('#'+filterreplaced1).addClass('active');  
+}
   
 var selector = '.collections_filter li';
 $(selector).on('click', function(){
