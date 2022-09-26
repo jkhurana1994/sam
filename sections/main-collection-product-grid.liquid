@@ -140,7 +140,24 @@
   </div>
 </div>
 <script>
-alert('hello');
+const url = new URL(window.location.href);
+  const searchParams = url.searchParams;
+  const filet = searchParams.get('filter.p.m.custom.features'); 
+  $('#'+filet).addClass('active');  
+  $('input[name="recommened"]').on('click', function() { 
+    $('.custom_filters.active').removeClass('active'); // Just remove class from all folder
+    $(this).addClass('active');
+    var filter = $(this).val();
+    var filterreplaced = filter.split(' ').join('+');
+    var url = window.location.href.split('?')[0];
+    var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
+    var urltohearer=url+'?sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
+    console.log(urladded);
+    history.pushState('data','',urltohearer);
+    var jatin = fetch(urladded)
+      .then(response => response.text())
+      .then(data => (data)).then(success => doSomething(success));
+  });
 </script>
 {% schema %}
 {
