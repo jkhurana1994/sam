@@ -635,6 +635,19 @@
     </details>
   </menu-drawer>
 
+                                    <div class="custom-filters">
+     <ul class="collections_filter">
+    {% comment %} Adding the new html element All, So that we can show the all products {% endcomment %}
+     <li class="collectionfilterli" data-id="All"><input type="radio" name="recommened" value="All" class="custom_filters" id="showallrecommended"> <span>All</span></li>
+      {% assign beatles = section.settings.filters | split: "," %}
+      {% comment %} Fetching the values of the recommended search filter data{% endcomment %}
+      {% for member in beatles %}
+        <li class="collectionfilterli" data-id="{{ member }}"> <input type="radio" name="recommened" value="{{ member }}" id="{{ member | replace_last: ' ', '_'}}" class="custom_filters"> <span>{{ member }}</span></li>
+      {% endfor %}
+    </ul>  
+  </div>
+                                    
+
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
     {%- for filter in results.filters -%}
       {%- for value in filter.active_values -%}
