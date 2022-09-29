@@ -142,10 +142,7 @@
 </div>
 <script>
 $( document ).ready(function() {
-  $("#showallrecommended").on('click', function(){
-    alert('to');
-    $("#showallproducts").trigger("click");
-  });
+
 function doSomething(successdata){
   $('#shopify-section-template--16015676113045__product-grid').remove();
   $('#shopify-section-template--16015676113045__banner').after(successdata); 
@@ -155,9 +152,12 @@ function doSomething(successdata){
   const searchParams = url.searchParams;
   const filet = searchParams.get('filter.p.m.custom.features');
   if(filet != null){
+    console.log('yes');
     var filterreplaced1 = filet.split(' ').join('_');
     $('#'+filterreplaced1).addClass('active'); 
     $('#removeallfilter').hide();
+  }else{
+    console.log('no');
   }
   
 var selector = '.collectionfilterli';
