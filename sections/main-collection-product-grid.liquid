@@ -172,11 +172,14 @@ $( document ).ready(function() {
     var filterreplaced = filter.split(' ').join('+');
     var url = window.location.href.split('?')[0];
     var inval=$(this).data("id");
-    console.log(inval);
-    var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
-    var urltohearer=url+'?sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
-    
-    console.log(urladded);
+    if(inval==='All'){
+      console.log('yes');  
+    }
+    else{
+      console.log('no');
+      var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
+      var urltohearer=url+'?sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
+    }
     history.pushState('data','',urltohearer);
     // this function is using the get the filtered html on the base input selection //
     var jatin = fetch(urladded)
