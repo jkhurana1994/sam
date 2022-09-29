@@ -30,6 +30,7 @@
     {% render 'meta-tags' %}
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    {% comment %} Adding the Jquery link so that I can use the functions of Jquery {% endcomment %}
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     {{ content_for_header }}
 
@@ -251,8 +252,8 @@
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
         {% if template contains 'collection' %}  
-      <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
-      <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
+            <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+            <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
           {% endif %}
     </main>
 
