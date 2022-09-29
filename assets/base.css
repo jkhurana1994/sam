@@ -2975,6 +2975,9 @@ details-disclosure > details {
 } 
   
 }
+.facets-container {
+   display: block;
+}
 
 
 
