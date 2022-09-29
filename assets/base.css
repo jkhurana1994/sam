@@ -2975,6 +2975,10 @@ details-disclosure > details {
 } 
   
 }
+
+
+
+@media only screen and (min-width: 767px){
 .facets-wrapper .facets-container {
    display: block;
 }
@@ -2984,7 +2988,7 @@ details-disclosure > details {
 
 
 
-
+}
 
 
 
