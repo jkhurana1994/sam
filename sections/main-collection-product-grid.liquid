@@ -149,6 +149,10 @@ $( document ).ready(function() {
   $("#showallproducts").on('click', function(){
     $('.custom_filters.active').removeClass('active'); 
   });
+  // adding the active class when user clicks on All anchor tag from recommended search //
+  $("#showallproducts").on('click', function(){
+    $('.custom_filters.active').removeClass('active'); 
+  });
   // this function is using the set the fetched html content into the page //
   function doSomething(successdata){
   $('#shopify-section-template--16015676113045__product-grid').remove();
