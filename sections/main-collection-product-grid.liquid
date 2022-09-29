@@ -151,6 +151,7 @@ $( document ).ready(function() {
   });
   // adding the active class when user clicks on All anchor tag from recommended search //
   $("#showallrecommended").on('click', function(){
+    $('.custom_filters.active').removeClass('active'); 
     $('#showallrecommended').addClass('active'); 
   });
   // this function is using the set the fetched html content into the page //
