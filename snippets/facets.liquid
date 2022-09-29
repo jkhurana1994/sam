@@ -641,7 +641,7 @@
       {% assign beatles = section.settings.filters | split: "," %}
       {% comment %} Fetching the values of the recommended search filter data{% endcomment %}
       {% for member in beatles %}
-        <li class="collectionfilterli" data-id="{{ member }}"> <input type="radio" name="recommened" value="{{ member }}" id="{{ member | replace_last: ' ', '_'}}" class="custom_filters"> <span>{{ member }}</span></li>
+        <li class="collectionfilterli" data-id="{{ member }}"> <input type="radio" name="recommened" value="{{ member }}" id="custom_{{ member | replace_last: ' ', '_'}}" class="custom_filters"> <span>{{ member }}</span></li>
       {% endfor %}
     </ul>  
   </div>
