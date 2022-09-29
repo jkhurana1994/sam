@@ -28,10 +28,10 @@
   <div class="custom-filters">
     <h4>Recommended Searches</h4>
      <ul class="collections_filter">
-     <li><input type="radio" name="recommened" value="All" id="showallrecommended" class="custom_filters"> <span>All</span></li>
+     <li class="collectionfilterli" data-id="All"><input type="radio" name="recommened" value="All" class="custom_filters"> <span>All</span></li>
       {% assign beatles = section.settings.filters | split: "," %}
       {% for member in beatles %}
-        <li class="collectionfilterli"> <input type="radio" name="recommened" value="{{ member }}" id="{{ member | replace_last: ' ', '_'}}" class="custom_filters"> <span>{{ member }}</span></li>
+        <li class="collectionfilterli" data-id="{{ member }}"> <input type="radio" name="recommened" value="{{ member }}" id="{{ member | replace_last: ' ', '_'}}" class="custom_filters"> <span>{{ member }}</span></li>
       {% endfor %}
     </ul>  
   </div>
@@ -165,7 +165,7 @@ $( document ).ready(function() {
     var filter = $(this).find('input:radio').val();
     var filterreplaced = filter.split(' ').join('+');
     var url = window.location.href.split('?')[0];
-    var inval=$(this 'input').val();
+    var inval=$('').val();
     console.log(inval);
     var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
     var urltohearer=url+'?sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
