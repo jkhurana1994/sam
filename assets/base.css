@@ -2978,7 +2978,9 @@ details-disclosure > details {
 .facets-wrapper .facets-container {
    display: block;
 }
-
+.mobile-facets__wrapper {
+    justify-content: space-between;
+}
 
 
 
