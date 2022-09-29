@@ -29,7 +29,7 @@
     <h4>Recommended Searches</h4>
      <ul class="collections_filter">
     {% comment %} Adding the new html element All, So that we can show the all products {% endcomment %}
-     <li class="collectionfilterli" data-id="All"><input type="radio" name="recommened" value="All" class="custom_filters"> <span>All</span></li>
+     <li class="collectionfilterli" data-id="All"><input type="radio" name="recommened" value="All" class="custom_filters" id="showallrecommended"> <span>All</span></li>
       {% assign beatles = section.settings.filters | split: "," %}
       {% comment %} Fetching the values of the recommended search filter data{% endcomment %}
       {% for member in beatles %}
