@@ -164,6 +164,7 @@ $( document ).ready(function() {
   const filet = searchParams.get('filter.p.m.custom.features');
   if(filet != null){
     var filterreplaced1 = filet.split(' ').join('_');
+    alert(filterreplaced1);
     $('#'+filterreplaced1).addClass('active'); 
     $('#removeallfilter').hide();
   }
