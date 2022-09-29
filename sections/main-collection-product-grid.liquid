@@ -142,7 +142,8 @@
 </div>
 <script>
 $( document ).ready(function() {
-  $(document).on("click", "#showallrecommended", function(){
+  $("#showallrecommended").on('click', function(){
+    alert('to');
     $("#showallproducts").trigger("click");
   });
 function doSomething(successdata){
