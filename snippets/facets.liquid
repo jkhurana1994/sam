@@ -603,7 +603,31 @@
           </div>
         </form>
       </facet-filters-form>
+                                    
     </details>
+
+                                    <details class="mobile-facets__disclosure disclosure-has-popup">
+      <summary class="mobile-facets__open-wrapper focus-offset">
+        <span class="mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
+          {% render 'icon-filter' %}
+          <span class="mobile-facets__open-label button-label medium-hide large-up-hide">
+            {%- if enable_filtering and enable_sorting -%}
+              {{ 'products.facets.filter_and_sort' | t }}
+            {%- elsif enable_filtering -%}
+              {{ 'products.facets.filter_button' | t }}
+            {%- elsif enable_sorting -%}
+              {{ 'products.facets.sort_button' | t }}
+            {%- endif -%}
+          </span>
+          <span class="mobile-facets__open-label button-label small-hide">
+            {%- if enable_filtering -%}
+              {{ 'products.facets.filter_button' | t }}
+            {%- endif -%}
+          </span>
+        </span>
+        <span tabindex="0" class="mobile-facets__close mobile-facets__close--no-js">{%- render 'icon-close' -%}</span>
+      </summary>
+              </details>                         
   </menu-drawer>
 
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
