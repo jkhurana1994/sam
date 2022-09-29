@@ -143,7 +143,7 @@
 <script>
 $( document ).ready(function() {
   $(document).on("click", "#showallrecommended", function(){
-    $(this).text("It works!");
+    $("#showallproducts").trigger("click");
 });
 function doSomething(successdata){
   $('#shopify-section-template--16015676113045__product-grid').remove();
