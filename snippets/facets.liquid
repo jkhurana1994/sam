@@ -638,6 +638,15 @@
       </summary>
               </details>                         
   </menu-drawer>
+
+                                      <div class="custom-filters">
+     <ul class="collections_filter">
+      {% assign beatles = section.settings.filters | split: "," %}
+      {% for member in beatles %}
+        <li> <input type="radio" name="recommened" value="{{ member }}" id="{{ member | replace_last: ' ', '_'}}" class="custom_filters"> <span>{{ member }}</span></li>
+      {% endfor %}
+    </ul>  
+  </div>
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
     {%- for filter in results.filters -%}
       {%- for value in filter.active_values -%}
