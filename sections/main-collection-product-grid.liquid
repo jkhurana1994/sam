@@ -149,6 +149,7 @@ $( document ).ready(function() {
   $("#showallproducts").on('click', function(){
     $('.custom_filters.active').removeClass('active'); 
   });
+  // this function is using the set the fetched html content into the page //
   function doSomething(successdata){
   $('#shopify-section-template--16015676113045__product-grid').remove();
   $('#shopify-section-template--16015676113045__banner').after(successdata); 
@@ -163,6 +164,7 @@ $( document ).ready(function() {
     $('#removeallfilter').hide();
   }
   var selector = '.collectionfilterli';
+  // this on click funtion used when user click on recommended search filters //
   $(selector).on('click', function(){
     $('.custom_filters.active').removeClass('active'); // Just remove class from all folder
     $(this).addClass('active');
@@ -176,6 +178,7 @@ $( document ).ready(function() {
     
     console.log(urladded);
     history.pushState('data','',urltohearer);
+    // this function is using the get the filtered html on the base input selection //
     var jatin = fetch(urladded)
       .then(response => response.text())
       .then(data => (data)).then(success => doSomething(success));
