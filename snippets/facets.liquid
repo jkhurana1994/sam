@@ -55,6 +55,7 @@
                 {%- for filter in results.filters -%}
                   {%- for value in filter.active_values -%}
                     <facet-remove>
+                    {% comment %} Adding the Id in Anchor tag for desktop , so that I can hide this section {% endcomment %}
                       <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light" id="removeallfilter">
                         <span class="active-facets__button-inner button button--tertiary">
                           {{ filter.label }}: {{ value.label | escape }}
@@ -610,6 +611,7 @@
     {%- for filter in results.filters -%}
       {%- for value in filter.active_values -%}
         <facet-remove>
+          {% comment %} Adding the Id in Anchor tag for Mobile , so that I can hide this section {% endcomment %}
           <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light" id="removeallfilter">
             <span class="active-facets__button-inner button button--tertiary">
               {{ filter.label }}: {{ value.label | escape }}
