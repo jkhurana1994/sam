@@ -31,7 +31,7 @@
      <li><input type="radio" name="recommened" value="All" id="showallrecommended" class="custom_filters"> <span>All</span></li>
       {% assign beatles = section.settings.filters | split: "," %}
       {% for member in beatles %}
-        <li> <input type="radio" name="recommened" value="{{ member }}" id="{{ member | replace_last: ' ', '_'}}" class="custom_filters"> <span>{{ member }}</span></li>
+        <li class="collections_filter"> <input type="radio" name="recommened" value="{{ member }}" id="{{ member | replace_last: ' ', '_'}}" class="custom_filters"> <span>{{ member }}</span></li>
       {% endfor %}
     </ul>  
   </div>
