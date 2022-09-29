@@ -28,8 +28,10 @@
   <div class="custom-filters">
     <h4>Recommended Searches</h4>
      <ul class="collections_filter">
+    {% comment %} Adding the new html element All, So that we can show the all products {% endcomment %}
      <li class="collectionfilterli" data-id="All"><input type="radio" name="recommened" value="All" class="custom_filters"> <span>All</span></li>
       {% assign beatles = section.settings.filters | split: "," %}
+      {% comment %} Fetching the values of the recommended search filter data{% endcomment %}
       {% for member in beatles %}
         <li class="collectionfilterli" data-id="{{ member }}"> <input type="radio" name="recommened" value="{{ member }}" id="{{ member | replace_last: ' ', '_'}}" class="custom_filters"> <span>{{ member }}</span></li>
       {% endfor %}
@@ -141,6 +143,7 @@
   </div>
 </div>
 <script>
+  // this script is using for filter all the products on the basis of recommended search //
 $( document ).ready(function() {
   $("#showallproducts").on('click', function(){
     $('.custom_filters.active').removeClass('active'); 
@@ -165,7 +168,7 @@ $( document ).ready(function() {
     var filter = $(this).find('input:radio').val();
     var filterreplaced = filter.split(' ').join('+');
     var url = window.location.href.split('?')[0];
-    var inval=$('').val();
+    var inval=$(this).data("id");
     console.log(inval);
     var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
     var urltohearer=url+'?sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
