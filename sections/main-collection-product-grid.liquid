@@ -143,10 +143,9 @@
 <script>
 $( document ).ready(function() {
   $("#showallproducts").on('click', function(){
-    alert('to');
-    
+    $('.custom_filters.active').removeClass('active'); 
   });
-function doSomething(successdata){
+  function doSomething(successdata){
   $('#shopify-section-template--16015676113045__product-grid').remove();
   $('#shopify-section-template--16015676113045__banner').after(successdata); 
   $('#removeallfilter').hide();
