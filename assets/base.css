@@ -2975,7 +2975,7 @@ details-disclosure > details {
 } 
   
 }
-.facets-container {
+.facets-wrapper .facets-container {
    display: block;
 }
 
