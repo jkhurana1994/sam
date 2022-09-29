@@ -2970,9 +2970,9 @@ details-disclosure > details {
 
 @media only screen and (max-width: 767px){
 .collections_filter {gap: 10px;}
-/* .desktop_view_filter{
+ .desktop_view_filter{
   display:none;
-} */
+} 
   
 }
 
