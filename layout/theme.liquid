@@ -298,57 +298,5 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    <script>
-  // this script is using for filter all the products on the basis of recommended search //
-$( document ).ready(function() {
-  // removing the active class when user clicks on remove all anchor tag //
-  $("#showallproducts").on('click', function(){
-    $('.collectionfilterli.active').removeClass('active'); 
-  });
-   $("#showallrecommended").on('click', function(){
-    $('.collectionfilterli.active').removeClass('active'); 
-  });
-  // this function is using the set the fetched html content into the page //
-  function doSomething(successdata){
-    $('#shopify-section-template--16015676113045__product-grid').remove();
-    $('#shopify-section-template--16015676113045__banner').after(successdata); 
-    $('#removeallfilter').hide();
-  }
-  // adding the active class when user clicks on anchor tag from recommended search //
-  const url = new URL(window.location.href);
-  const searchParams = url.searchParams;
-  const filet = searchParams.get('filter.p.m.custom.features');
-  if(filet != null){
-    var filterreplaced1 = filet.split(' ').join('_');
-    alert(filterreplaced1);
-    $('#'+filterreplaced1).addClass('active'); 
-    $('#removeallfilter').hide();
-  }
-  var selector = '.collectionfilterli';
-  // this on click funtion used when user click on recommended search filters //
-  $(selector).on('click', function(){
-    var filter = $(this).find('input:radio').val();
-    var filterreplaced = filter.split(' ').join('+');
-    var url = window.location.href.split('?')[0];
-    var inval=$(this).data("id");
-    // conditional url when user click on All from recommended search //
-    if(inval==='All'){
-      var urladded=url+'?section_id=template--16015676113045__product-grid';
-      var urltohearer=url;
-    }
-    else{
-      var urladded=url+'?section_id=template--16015676113045__product-grid&sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
-      var urltohearer=url+'?sort_by=title-ascending&filter.p.m.custom.features='+filterreplaced;
-    }
-    history.pushState('data','',urltohearer);
-    // this function is using the get the filtered html on the base input selection //
-    var jatin = fetch(urladded)
-      .then(response => response.text())
-      .then(data => (data)).then(success => doSomething(success));
-  });
-});
-</script>
-
-
 </body>
 </html>
