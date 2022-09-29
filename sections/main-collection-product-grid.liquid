@@ -159,9 +159,8 @@ function doSomething(successdata){
     $('#'+filterreplaced1).addClass('active'); 
     $('#removeallfilter').hide();
   }
-  
-var selector = '.collectionfilterli';
-$(selector).on('click', function(){
+  var selector = '.collectionfilterli';
+  $(selector).on('click', function(){
     $('.custom_filters.active').removeClass('active'); // Just remove class from all folder
     $(this).addClass('active');
     var filter = $(this).find('input:radio').val();
