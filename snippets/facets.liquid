@@ -410,15 +410,15 @@
   {%- endif -%}
   {% comment %}  Drawer and mobile filter {% endcomment %}
   <menu-drawer class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} medium-hide large-up-hide{% endif %}" data-breakpoint="mobile">
- <details class="mobile-facets__disclosure1">
-     <summary class="mobile-facets__open-wrapper1">
+ <div class="mobile-facets__disclosure1">
+     <div class="mobile-facets__open-wrapper1">
         <span class="mobile-facets__open1 medium-hide large-up-hide">
           <span class="mobile-facets__open-label1 medium-hide large-up-hide">
            Recommended Searches
           </span>
         </span>
-      </summary>
- </details>
+      </div>
+ </div>
     <details class="mobile-facets__disclosure disclosure-has-popup">
       <summary class="mobile-facets__open-wrapper focus-offset">
         <span class="mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
